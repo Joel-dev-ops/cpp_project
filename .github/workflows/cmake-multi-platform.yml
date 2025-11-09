@@ -27,7 +27,7 @@ jobs:
           export CC="ccache clang"
           export CXX="ccache clang++"
           mkdir build && cd build
-          cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain.cmake ..
+          cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain.cmake ..
 
       - name: Build
         run: cmake --build build
