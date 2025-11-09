@@ -1,0 +1,5 @@
+enable_testing()
+add_executable(test_add src/test_add.cpp)
+target_link_libraries(test_add PRIVATE core GTest::gtest_main)
+include(GoogleTest)
+gtest_discover_tests(test_add)
